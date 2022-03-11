@@ -11,12 +11,13 @@ pipeline {
         '''
       }
     }
-  }
+  
     stage('Start container') {
       steps {
+        sh '''
         sh 'docker-compose up -d'
         sh 'docker-compose ps'
       }
     }
   }
- 
+}
