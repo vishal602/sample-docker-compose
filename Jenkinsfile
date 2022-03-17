@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+        label 'Jenkins-Slave-138'
+    }
+}
+      
   stages {
     stage("verify tooling") {
       steps {
